@@ -21,6 +21,7 @@ function browsersync() {
   });
 }
 
+
 function cleanDist() {
   return del('dist')
 }
@@ -52,13 +53,6 @@ function images() {
     ))
     .pipe(dest('dist/images'))
 }
-// !!!!!!! Сделано для Deploy  проекта на GitHub pages
-var ghPages = require('gulp-gh-pages');
-
-gulp.task('deploy', function () {
-  return gulp.src('./dist/**/*')
-    .pipe(ghPages());
-});
 
 function scripts() {
   return src([
