@@ -1,0 +1,186 @@
+@import "../vars";
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: $headerHeight;
+    align-items: flex-end;
+    padding: 0 71px 0 51px;
+    justify-content: space-between;
+    z-index: 950;
+    @media (max-width: 960px) {
+        padding: 0 20px;
+        height: $headerHeightMob;
+        align-items: center;
+    }
+
+    &__logo {
+        position: relative;
+        width: 156px;
+        height: 76px;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            object-fit: contain;
+            z-index: 1;
+            transition: opacity 0.2s linear;
+        }
+        @media (max-width: 600px) {
+            width: 109px;
+            height: 56px;
+        }
+    }
+
+    &__name-block {
+        display: flex;
+        align-items: center;
+        @media (max-width: 1200px) {
+            position: relative;
+            z-index: 1000;
+        }
+        span {
+            text-transform: uppercase;
+            font-size: 30px;
+            line-height: calc(40 / 30 * 100%);
+            display: inline-block;
+            margin-right: 16px;
+            font-weight: 700;
+            transition: transform 0.3s linear, opacity 0.3s linear;
+            @media (max-width: 960px) {
+                font-size: 25px;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 20px;
+            }
+            @media (max-width: 350px) {
+                font-size: 15px;
+            }
+        }
+
+        button,
+        a {
+            display: inline-block;
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            animation: button-blinking 3s linear infinite;
+            @media (max-width: 960px) {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+}
+.logo-desktop {
+    display: block;
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+.logo-mobile {
+    display: none;
+    @media (max-width: 1200px) {
+        display: block;
+    }
+}
+
+.header-btn {
+    background-color: $green;
+}
+
+.logo {
+    width: 156px;
+    height: 76px;
+}
+
+.black {
+    .header {
+        &__logo {
+            background-image: url("../../images/header/logo-green-bg.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: background 0.2s linear;
+            @media (any-hover: hover) {
+                &:hover {
+                    background-image: url("../../images/header/logo-green.svg");
+                }
+            }
+        }
+
+        &__name-block {
+            span {
+                color: $white !important;
+            }
+        }
+    }
+}
+
+.light {
+    .header {
+        &__logo {
+            background-image: url("../../images/header/logo-black-bg.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: background 0.2s linear, opacity 0.3s linear, transform 0.3s linear;
+            @media (any-hover: hover) {
+                &:hover {
+                    background-image: url("../../images/header/logo-black.svg");
+                }
+            }
+        }
+
+        &__name-block {
+            span {
+                display: inline-block;
+                transition: opacity 0.3s linear, transform 0.3s linear;
+                color: $black;
+            }
+        }
+    }
+}
+
+.logo-mobile {
+    @media (max-width: 1200px) {
+        .logo-mobile--disable-menu {
+            display: block;
+        }
+        .logo-mobile--active-menu {
+            display: none;
+        }
+    }
+}
+
+.active {
+    .header {
+        .logo-mobile {
+            @media (max-width: 1200px) {
+                .logo-mobile--disable-menu {
+                    display: none;
+                }
+                .logo-mobile--active-menu {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@keyframes button-blinking {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

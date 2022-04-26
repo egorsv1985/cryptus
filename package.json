@@ -1,0 +1,32 @@
+{
+  "name": "gulp-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vadym Prokopchuk",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "csshake": "^1.5.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^2.0.0",
+    "matter-js": "^0.18.0",
+    "progressbar.js": "^1.1.0",
+    "sass": "^1.49.9",
+    "three-orbitcontrols": "^2.110.3"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "lil-gui": "^0.3.0",
+    "requirejs": "^2.3.6",
+    "three": "^0.138.3"
+  }
+}

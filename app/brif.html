@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бриф</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <canvas class="grain"></canvas>
+
+  <section class="brif wrapper brif--green">
+    <header class="header">
+      <a class="brif__logo" href="#">
+      </a>
+      <a href="#" class="header__logo logo-active-tablet">
+
+        <img src="images/header/logo-mob-black.png" alt="">
+      </a>
+      <div class="header__name-block">
+        <span id="name-block">
+          brif
+        </span>
+        <button class="header-btn--briff"></button>
+      </div>
+    </header>
+    <form class="brif__content">
+      <button id="back-button" class="brif-back">
+        back
+      </button>
+      <div class="brif__item brif-item organization">
+        <p class="brif-item__name">
+          Name of the organization
+        </p>
+        <div class="brif-item__main">
+          <input id="organization" name="organization" type="text" placeholder="lorem ipsum">
+          <button id="send-organization">send</button>
+        </div>
+      </div>
+
+      <div class="brif__item brif-item telegram">
+        <p class="brif-item__name">
+          telegram or email*
+        </p>
+        <div class="brif-item__main shake-trigger">
+          <input id="telegram" name="telegram" type="text" placeholder="lorem ipsum">
+          <button id="send-telegram">send</button>
+        </div>
+      </div>
+
+      <div class="brif__last-form brif-last">
+        <div class="brif-last__item">
+          <label class="brif-last__name">
+            project link
+          </label>
+          <input id="link-project" name="link" type="text" placeholder="lorem ipsum">
+        </div>
+        <div class="brif-last__item">
+          <label class="brif-last__name">
+            Additional Information
+          </label>
+          <textarea id="additional" name="additional" placeholder="lorem ipsum"></textarea>
+        </div>
+        <button id="send-additional" type="submit">
+          send
+        </button>
+      </div>
+    </form>
+    <div class="brif__done brif-done">
+      <a href="#" id="done-text" class="brif-done__success">
+        Done!
+      </a>
+      <p>
+        Your data has been sent. You will be contacted within 2 working days.
+      </p>
+    </div>
+
+    <div class="brif__progressbar brif-progressbar">
+      <div class="brif-progressbar__top">
+        <span>brief</span>
+        <a class="brif__logo" href="#">
+        </a>
+      </div>
+      <div class="brif-progressbar__indicator">
+        <!-- <span id="indicator-progressbar"></span> -->
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
